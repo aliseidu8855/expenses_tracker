@@ -9,7 +9,7 @@ def load_expenses_from_csv(filename='expenses.csv'):
             reader = csv.DictReader(file)
             expenses_record = [row for row in reader]
             for expense in expenses_record:
-                expense['amount'] = float(expense['amount'])  # Convert amount to float
+                expense['amount'] = float(expense['amount'])  
         print("Expenses loaded from CSV file successfully!")
     except FileNotFoundError:
         print("No existing CSV file found. Starting with an empty expense record.\n")
